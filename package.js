@@ -2,14 +2,17 @@ Package.describe({
   summary: "meteor-imagemagick-native"
 });
 
-Npm.depends({
-  'imagemagick-native': '0.2.8'
-});
 
 Package.on_use(function (api) {
   /**
    * Add all the files, in the order of their dependence (eg, if A.js depends on B.js, B.js must be before A.js)
    */
+  
+  
+  Npm.depends({
+    'imagemagick-native': '0.2.8'
+  });
+
   api.add_files([
     'wrapper.js' // <-- include all the necessary files in the package
     ],
